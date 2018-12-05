@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package proto;
+option java_package = "ru.serbis.okto.sv_blg.proto.union";
+option java_outer_classname = "Union";
+option optimize_for = SPEED;
+
+message Deleted {
+
+}
+

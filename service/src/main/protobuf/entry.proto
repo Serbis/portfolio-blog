@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package proto;
+option java_package = "ru.serbis.okto.sv_blg.proto.entry";
+option java_outer_classname = "Entry";
+option optimize_for = SPEED;
+
+message Entry {
+    string id = 1;
+    bool deleted = 2;
+    map<string, string> title = 3;
+    map<string, string> bText = 4;
+    map<string, string> aText = 5;
+    int64 timestamp = 6;
+}
+
+message Created {
+    Entry entry = 1;
+}
+
+message Updated {
+    repeated UpdateElem elems = 1;
+}
+
+message UpdateElem {
+    int32 field = 1;
+    string locale = 2;
+    string value = 3;
+}
